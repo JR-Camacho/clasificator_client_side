@@ -2,8 +2,8 @@ import MainLayout from "../../layouts/MainLayout";
 
 import Subtitle from "../../components/Subtitle";
 
-import background from "../../../public/images/background.jpg";
-import image from "../../../public/images/ml_image.png";
+import background from "/images/background.jpg";
+import image from "/images/ml_image.png";
 
 import { Button, Card, CardBody, Typography } from "@material-tailwind/react";
 import { Heart, Photograph, ShieldCheck, Star } from "heroicons-react";

@@ -29,8 +29,7 @@ const Test = () => {
   const [cameraActive, setCameraActive] = useState(false);
   const [mirrorState, setMirrorState] = useState(true);
 
-  const unload_model =
-    "../../../../../public/models/fashion_mnist/cnn_model/model.json";
+  const unload_model = "/models/fashion_mnist/cnn_model/model.json";
   const classNames = [
     "T-shirt/top",
     "Trouser",

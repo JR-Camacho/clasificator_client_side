@@ -25,7 +25,7 @@ import {
   Sun,
 } from "heroicons-react";
 
-import flowers_img from "../../../../../public/images/flowers.avif";
+import flowers_img from "/images/flowers.avif";
 import ClassCard from "../../../../components/ClassCard";
 
 const About = () => {

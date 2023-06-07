@@ -1,9 +1,9 @@
 import MainLayout from "../../layouts/MainLayout";
 
-import cats_vs_dogs_img from "../../../public/images/cats_vs_dogs.webp";
-import fashion_img from "../../../public/images/fashion.jpeg";
-import flowers_img from "../../../public/images/flowers.avif";
-import mnist_img from "../../../public/images/mnist_examples.png";
+import cats_vs_dogs_img from "/images/cats_vs_dogs.webp";
+import fashion_img from "/images/Fashion.jpeg";
+import flowers_img from "/images/flowers.avif";
+import mnist_img from "/images/mnist_examples.png";
 
 import {
   Card,

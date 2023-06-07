@@ -21,7 +21,7 @@ const Test = () => {
   const [boardActive, setBoardActive] = useState(false);
   const [prediction, setPrediction] = useState("");
 
-  const unload_model = "../../../../../public/models/mnist/model.json";
+  const unload_model = "/models/mnist/model.json";
   const classNames = [
     "Zero",
     "One",

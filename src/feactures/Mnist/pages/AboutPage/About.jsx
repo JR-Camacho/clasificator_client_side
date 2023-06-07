@@ -25,7 +25,7 @@ import {
   OfficeBuilding,
 } from "heroicons-react";
 
-import mnist_img from "../../../../../public/images/mnist_examples.png";
+import mnist_img from "/images/mnist_examples.png";
 
 const About = () => {
   const [open, setOpen] = useState(1);

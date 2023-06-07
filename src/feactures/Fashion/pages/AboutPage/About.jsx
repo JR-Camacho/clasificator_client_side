@@ -25,7 +25,7 @@ import {
   Star,
 } from "heroicons-react";
 
-import fashion_img from "../../../../../public/images/fashion.jpeg";
+import fashion_img from "/images/Fashion.jpeg";
 import ClassCard from "../../../../components/ClassCard";
 
 const About = () => {

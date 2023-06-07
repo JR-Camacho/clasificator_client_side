@@ -29,8 +29,7 @@ const Test = () => {
   const [cameraActive, setCameraActive] = useState(false);
   const [mirrorState, setMirrorState] = useState(true);
 
-  const unload_model =
-    "../../../../../public/models/cats_vs_dogs/cnn_model/model.json";
+  const unload_model = "/models/cats_vs_dogs/cnn_model/model.json";
   const classNames = ["Cat", "Dog"];
 
   let mediaStream = null;

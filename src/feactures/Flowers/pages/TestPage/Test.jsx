@@ -25,7 +25,7 @@ const Test = () => {
   const [cameraActive, setCameraActive] = useState(false);
   const [mirrorState, setMirrorState] = useState(true);
 
-  const unload_model = "../../../../../public/models/flowers/cnn_model/model.json";
+  const unload_model = "/models/flowers/cnn_model/model.json";
   const classNames = ["Dandelion", "Daisy", "Tulip", "Sunflower", "Rose"];
 
   let mediaStream = null;
