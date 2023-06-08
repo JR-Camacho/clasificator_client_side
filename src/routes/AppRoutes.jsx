@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Home, Model, Suport, PageNotFound } from "../Pages/Index";
+import { Home, Model, Suport, PageNotFound } from "../pages/Index";
 
 import { CatsDogsRoutes } from "../feactures/DogsVsCats/Index";
 import { FashionRoutes } from "../feactures/Fashion/Index";

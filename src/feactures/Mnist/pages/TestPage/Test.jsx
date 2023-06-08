@@ -14,8 +14,10 @@ import { processImageGray } from "../../../../helpers/ProcessImage";
 import { Button } from "@material-tailwind/react";
 
 import * as tf from "@tensorflow/tfjs";
+import SpinnerLoading from "../../../../components/SpinnerLoading";
 
 const Test = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [image, setImage] = useState(null);
   const [loadedModel, setLoadedModel] = useState(null);
   const [boardActive, setBoardActive] = useState(false);
@@ -45,8 +47,10 @@ const Test = () => {
   }, []);
 
   const loadModel = async () => {
+    setIsLoading(true);
     const model = await tf.loadLayersModel(unload_model);
     console.log("Loaded");
+    setIsLoading(false);
     setLoadedModel(model);
   };
 
@@ -62,10 +66,9 @@ const Test = () => {
     loadModel();
   }, []);
 
-  console.log(image);
-
   return (
     <MainLayout>
+      {isLoading && <SpinnerLoading />}
       <div className="min-h-screen pt-20">
         <Title title={"Handwritten Digit Recognition"} />
         <div className="flex justify-evenly items-center">

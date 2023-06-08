@@ -6,9 +6,14 @@ import Title from "../../../../components/Title";
 import Subtitle from "../../../../components/Subtitle";
 import DropZone from "../../../../components/DropZone";
 import ImagePreview from "../../../../components/ImagePreview";
+import SpinnerLoading from "../../../../components/SpinnerLoading";
 
 import { predict } from "../../../../helpers/Predict";
-import { startCamera, stopCamera, switchCamera } from "../../../../helpers/ProcessCamera";
+import {
+  startCamera,
+  stopCamera,
+  switchCamera,
+} from "../../../../helpers/ProcessCamera";
 import { processImageRGB } from "../../../../helpers/ProcessImage";
 
 import { Button } from "@material-tailwind/react";
@@ -19,6 +24,7 @@ import Webcam from "webcam-react";
 const Test = () => {
   const webcamRef = useRef();
 
+  const [isLoading, setIsLoading] = useState(false);
   const [image, setImage] = useState(null);
   const [loadedModel, setLoadedModel] = useState(null);
   const [prediction, setPrediction] = useState("");
@@ -40,8 +46,10 @@ const Test = () => {
   }, []);
 
   const loadModel = async () => {
+    setIsLoading(true);
     const model = await tf.loadLayersModel(unload_model);
     console.log("Loaded");
+    setIsLoading(false);
     setLoadedModel(model);
   };
 
@@ -69,6 +77,7 @@ const Test = () => {
 
   return (
     <MainLayout>
+      {isLoading && <SpinnerLoading />}
       <div className="min-h-screen pt-20">
         <Title title={"Flowers clasificaction"} />
         <div className="flex justify-evenly items-center">
@@ -100,7 +109,7 @@ const Test = () => {
                       webcamRef,
                       mediaStream,
                       mirrorState,
-                      setMirrorState,
+                      setMirrorState
                     )
                   }
                 >

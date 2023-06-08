@@ -7,7 +7,7 @@ import TextArea from "./components/Form/TextArea";
 import TextInput from "./components/Form/TextInput";
 import AlertModal from "../../components/AlertModal";
 
-import { EMAILJS_ACCESS } from "../../Utilities/ServicesAccess";
+import { EMAILJS_ACCESS } from "../../utilities/ServicesAccess";
 
 import { Button, Typography } from "@material-tailwind/react";
 
