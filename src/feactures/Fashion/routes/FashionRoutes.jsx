@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { About, Test } from "../Index";
 
-import { PageNotFound } from "../../../Pages/Index";
+import { PageNotFound } from "../../../pages/Index";
 
 const FashionRoutes = () => {
   return (
